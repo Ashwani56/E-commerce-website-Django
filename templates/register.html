@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block body %}
+
+         
+       
+
+<!--Register-->
+<div class="container mb-3 py-4">
+    <h2 class="text-center">Signup</h2>
+    <form method="post" action="/register">
+    {% csrf_token %}
+      <form>
+          <div class="from-group">
+            <label for="user">user</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your name">
+          </div>
+		  <div class="from-group">
+            <label for="email">email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email">
+          </div>
+          
+          <div class="from-group">
+            <label for="password">password</label>
+            <input type="password" class="form-control" id="password" name= "password" placeholder="password">
+          </div>
+         
+
+
+
+
+
+
+
+		                 
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
+
+
+
+{% endblock body %}

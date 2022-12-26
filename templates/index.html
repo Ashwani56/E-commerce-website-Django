@@ -1,0 +1,320 @@
+{% extends 'base.html' %}
+
+{%block body %}
+<link rel="stylesheet" href="static/swap.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<link rel="stylesheet" href="static/footer.css">
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="static/a.webp"style="width:100%">
+  
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="static/b.jpg" style="width:100%">
+    
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="static/c.jpg" style="width:100%">
+   
+  </div>
+ 
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for(i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if(slideIndex > slides.length) {
+      slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); 
+  }
+</script>
+
+<div class="categories">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-3">
+        <img src="static/ice.jpg" alt="" width="250px" height="250px"/>
+      </div>
+      <div class="col-3">
+        <img src="static/french.jpg" alt=""/width="250px" height="250px">
+      </div>
+      <div class="col-3">
+        <img src="static/hot.jpg" alt="" width="250px" height="250px"/>  
+      </div>
+
+    
+
+
+      
+    </div>
+    
+  </div>
+
+
+</div>
+
+<div class="small-container">
+  <h2 class="title">Featured Tea/ Coffee</h2>
+  <div class="row">
+    <div class="col-4">
+     <img src="static/tea3.jpg" alt="" width="200px" height="200px"/>
+
+     <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <h5 class="card-title text-info product-name">french</h5>
+              <p class="card-text text-success product-price">150 Rs.</p>
+              <button class="btn badge badge-pill badge-secondary mt-2 float-right" type="button" 
+              data-action="add-to-cart">Add to cart</button>
+  </div> 
+
+
+  <div class="col-4">
+    <img src="static\caf.jpg" alt="" width="200px" height="200px"/>
+    <h4>cappuccino</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+
+  <div class="col-4">
+    <img src="static/latte.jpg" alt="" width="200px" height="200px"/>
+    <h4>latte</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+  <div class="col-4">
+    <img src="static/tea1.jpg" alt="" width="200px" height="200px"/>
+    <h4>redtea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+</div>
+<h2 class="title">Latest Coffee & tea </h2>
+<div class="row">
+  <div class="col-4">
+    <img src="static/mocha.jpg" alt="" width="200px" height="200px"/>
+    <h4>mocha</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+
+  <div class="col-4">
+    <img src="static/tea3.jpg" alt="" width="200px" height="200px"/>
+    <h4>orange tea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+
+  <div class="col-4">
+    <img src="static/tea4.jpg" alt=""width="200px" height="200px"/>
+    <h4>hot tea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+  <div class="col-4">
+    <img src="static/tea5.jpg" alt="" width="200px" height="200px"/>
+    <h4>masala tea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <img src="static/tea1.jpg" alt="" width="200px" height="200px"/>
+    <h4>naturals tea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+
+  <div class="col-4">
+    <img src="static/tea2.jpg" alt="" width="200px" height="200px"/>
+    <h4>lemon tea</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+
+  <div class="col-4">
+    <img src="static/mo.jpg" alt="" width="200px" height="200px"/>
+    <h4>forthy mexi-mocha</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+  <div class="col-4">
+    <img src="static/redi.jpg" alt="" width="200px" height="200px"/>
+    <h4>Red coffee</h4>
+    <div class="rating">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+    </div>
+    <p>$50.00</p>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Download Our App</h3>
+        <p>
+          Download App for Android <br />
+          and ios mobile phone
+        </p>
+        <div class="app-logo">
+          <img src="static/play-store.png" alt="" />
+          <img src="static/app-store.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <img src="static/logo.jpg" alt="" />
+        <p>
+          address-old dlf sec-14 <br />shop no-10
+        
+        </p>
+      </div>
+      <div class="footer-col-3">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Coupons</li>
+          <li>Blog Post</li>
+          <li>Return Policy</li>
+          <li>Join Affiliate</li>
+        </ul>
+      </div>
+
+      <div class="footer-col-4">
+        <h3>Follow us</h3>
+        <ul>
+          <li>
+            <a href="http://" class="fa fa-facebook"></a>
+          </li>
+          <li>
+            <a href="http://" class="fa fa-instagram"></a>
+          </li>
+          <li>
+            <a href="http://" class="fa fa-youtube"></a>
+          </li>
+          <li>
+            <a href="http://" class="fa fa-snapchat"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright">Copyright 2022</p>
+  </div>
+</div>
+<!-- JS for Toggle menu -->
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle() {
+    if (MenuItems.style.maxHeight == "0px") {
+      MenuItems.style.maxHeight = "200px";
+    } else {
+      MenuItems.style.maxHeight = "0px";
+    }
+  }
+</script>
+                
+                
+
+
+
+{%endblock body %}
